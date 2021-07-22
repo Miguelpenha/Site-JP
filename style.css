@@ -958,7 +958,7 @@ textarea {
 
     .ensino>.funda>.campo-svg-txt-funda {
         width: 250px;
-        padding-bottom: 0%;
+        padding-bottom: 10%;
     }
 
     .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>p {
@@ -987,38 +987,28 @@ textarea {
     }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 551px) {
     .ensino>.funda {
-        padding-left: 1%;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
     }
 
     .ensino>.funda>.campo-svg-txt-funda {
-        width: 220px;
-        padding-bottom: 0%;
-    }
-
-    .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>p {
-        font-size: 16px;
-    }
-
-    .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>h1 {
-        font-size: 25px;
+        margin-left: 3.1%;
+        width: 500px;
+        padding: 0%;
     }
 
     .ensino>.infa {
-        padding-right: 1%;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
     }
 
     .ensino>.infa>.campo-svg-txt-infa {
-        width: 220px;
-        padding-bottom: 14%;
-    }
-
-    .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa>p {
-        font-size: 16px;
-    }
-
-    .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa>h1 {
-        font-size: 25px;
+        margin-left: 3.1%;
+        width: 500px;
+        padding: 0%;
     }
 }

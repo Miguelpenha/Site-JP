@@ -263,6 +263,13 @@
                 window.document.getElementsByClassName('campo-svg-txt')[0].className = 'col-2 campo-svg-txt'
                 window.document.getElementsByClassName('campo-txt')[0].className = 'col-10 campo-txt'
            }
+           if (window.innerWidth <= 550) {
+                window.document.getElementsByClassName('infa')[0].className = 'row infa'
+                window.document.getElementsByClassName('funda')[0].className = 'row funda'
+           } else {
+                window.document.getElementsByClassName('infa')[0].className = 'col infa'
+                window.document.getElementsByClassName('funda')[0].className = 'col funda'
+           }
        }, 1);
        fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/acessos-site')
        function clickBtnEnvi() {
