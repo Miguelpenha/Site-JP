@@ -986,3 +986,39 @@ textarea {
         font-size: 25px;
     }
 }
+
+@media screen and (max-width: 545px) {
+    .ensino>.funda {
+        padding-left: 1%;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda {
+        width: 220px;
+        padding-bottom: 0%;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>p {
+        font-size: 16px;
+    }
+
+    .ensino>.funda>.campo-svg-txt-funda>.campo-txt-funda>h1 {
+        font-size: 25px;
+    }
+
+    .ensino>.infa {
+        padding-right: 1%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa {
+        width: 220px;
+        padding-bottom: 14%;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa>p {
+        font-size: 16px;
+    }
+
+    .ensino>.infa>.campo-svg-txt-infa>.campo-txt-infa>h1 {
+        font-size: 25px;
+    }
+}
