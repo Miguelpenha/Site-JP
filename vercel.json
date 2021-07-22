@@ -16,5 +16,11 @@
             "source": "/index.html",
             "destination": "/"
         }
+    ],
+    "rewrites": [
+        {
+            "source": "/404.html",
+            "destination": "404"
+        }
     ]
 }
