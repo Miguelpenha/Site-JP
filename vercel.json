@@ -1,5 +1,4 @@
 {
-    "cleanUrls": true,
     "redirects": [
         {
             "source": "/README.md",
@@ -15,9 +14,7 @@
         }
     ],
     "rewrites": [
-        {
-            "source": "/sitemap.xml",
-            "destination": "/sitemap"
-        }
+        
+              
     ]
 }
