@@ -1070,3 +1070,84 @@ textarea {
         height: 17%;
     }
 }
+
+.campo-loca-tel {
+    background-color: #CDE2EB;
+    width: 100%;
+    margin-left: 0%;
+}
+
+.campo-loca-tel>.loca {
+    padding-bottom: 5%;
+}
+
+.campo-loca-tel>.loca>.svg-txt {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+.campo-loca-tel>.loca>.svg-txt>svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    background-color: #4ED963;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-radius: 50%/50%;
+    margin-bottom: 5%;
+}
+
+.campo-loca-tel>.loca>.svg-txt>h1 {
+    text-align: center;
+    color: #000000;
+    font-weight: 100;
+    margin-bottom: 2%;
+}
+
+.campo-loca-tel>.loca>.svg-txt>h6 {
+    text-align: center;
+    color: #000000;
+    width: 100%;
+    font-weight: 100;
+}
+
+.campo-loca-tel>.tel {
+    padding-bottom: 5%;
+}
+
+.campo-loca-tel>.tel>.svg-txt {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+.campo-loca-tel>.tel>.svg-txt>svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    background-color: #4ED963;
+    padding: 10%;
+    border-radius: 50px;
+    margin-bottom: 5%;
+}
+
+.campo-loca-tel>.tel>.svg-txt>h1 {
+    text-align: center;
+    color: #000000;
+    font-weight: 100;
+    margin-bottom: 2%;
+}
+
+.campo-loca-tel>.tel>.svg-txt>h6 {
+    text-align: center;
+    color: #000000;
+    width: 100%;
+    font-weight: 100;
+}
