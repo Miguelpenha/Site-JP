@@ -89,16 +89,17 @@
             </div>
         </div>
         <div class="col-1 central-campo-form central-campo-form-pc">
-            <form id="central-form" class="row central-form-pc">
+            <form id="central-form" class="row central-form-pc" action="https://api.staticforms.xyz/submit" method="POST">
+                <input type="hidden" name="accessKey" value="9a524b16-f082-4f87-8e87-bd2fd76786d2">
                 <div class="row campo-tit">
                     <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
                 <div class="row campos">
-                    <input type="hidden" name="redi" value="https://josivalpenha.site/obrigado.html">
-                    <input type="text" placeholder="Nome do responsável" class="campo campo-top nomeRes-pc" id="nomeRes" name="nomeRes" required>
-                    <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="nomeCri" required>
-                    <input type="tel" placeholder="Telefone" class="campo campo-top" id="telefone" name="telefone" required>
-                    <input type="email" placeholder="E-mail" class="campo campo-top" id="email" name="email">
+                    <input type="text" placeholder="Nome do responsável" class="campo campo-top nomeRes-pc" id="nomeRes" name="$nomeRes" required>
+                    <input type="text" placeholder="Nome da criança" class="campo campo-top" id="nomeCri" name="$nomeCri" required>
+                    <input type="tel" placeholder="Telefone" class="campo campo-top" id="telefone" name="$telefone" required>
+                    <input type="email" placeholder="E-mail" class="campo campo-top" id="email" name="$email">
+                    <input type="hidden" name="redirectTo" value="https://josivalpenha.site/?formPc">
                 </div>
                 <button class="btn btn-form">Envie agora</button>
             </form>
@@ -122,17 +123,19 @@
             </div>
         </div>
         <div class="row central-campo-form central-campo-form-row">
-            <form id="central-form" class="row central-form-mobile">
+            <form id="central-form" class="row central-form-mobile" action="https://api.staticforms.xyz/submit" method="POST">
+                <input type="hidden" name="accessKey" value="9a524b16-f082-4f87-8e87-bd2fd76786d2">
                 <div class="row campo-tit">
                     <h4>ENTRE EM CONTATO CONOSCO HOJE</h4>
                 </div>
                 <div class="row campos">
-                    <input type="text" placeholder="Nome do responsável" class="campo campo-top nomeRes-mobile" id="nomeRes" name="nomeRes" required>
-                    <input type="text" placeholder="Nome da criança" class="campo campo-top nomeCri-mobile" id="nomeCri" name="nomeCri" required>
-                    <input type="tel" placeholder="Telefone" class="campo campo-top telefone-mobile" id="telefone" name="telefone" required>
-                    <input type="email" placeholder="E-mail" class="campo campo-top email-mobile" id="email" name="email">
+                    <input type="text" placeholder="Nome do responsável" class="campo campo-top nomeRes-mobile" id="nomeRes" name="$nomeRes" required>
+                    <input type="text" placeholder="Nome da criança" class="campo campo-top nomeCri-mobile" id="nomeCri" name="$nomeCri" required>
+                    <input type="tel" placeholder="Telefone" class="campo campo-top telefone-mobile" id="telefone" name="$telefone" required>
+                    <input type="email" placeholder="E-mail" class="campo campo-top email-mobile" id="email" name="$email">
+                    <input type="hidden" name="redirectTo" value="https://josivalpenha.site/?formMobile">
                 </div>
-                <button class="btn btn-form">Envie agora</button>
+                <button class="btn btn-form" type="submit">Envie agora</button>
             </form>
             <br>
             <br>
@@ -288,54 +291,20 @@
                 window.document.getElementsByClassName('funda')[0].className = 'col funda'
            }
        }, 1);
-       fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/acessos-site')
        function clickBtnEnvi() {
-        window.document.location.reload()
+        window.document.location.replace('https://josivalpenha.site')
        }
-
-       $('.central-form-mobile').submit(ev => {
-            ev.preventDefault()
-            fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/cliques-botao-formulario')
-            if (String($('.email-mobile').val()).length == 0) {
-                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('.nomeRes-mobile').val())}/${String($('.nomeCri-mobile').val())}/${String($('.telefone-mobile').val())}/Não informado`)
-                setInterval(() => {
-                    window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
+       if (window.location.search.replace('?', '') == 'formMobile') {
+        window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
+        window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
+        window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
+        window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
+       } else if (window.location.search.replace('?', '') == 'formPc') {
+        window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
                     window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
                     window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
                     window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
-                }, 1)
-            } else {
-                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('.nomeRes-mobile').val())}/${String($('.nomeCri-mobile').val())}/${String($('.telefone-mobile').val())}/${String($('.email-mobile').val())}`)
-                setInterval(() => {
-                    window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
-                    window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
-                    window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
-                    window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
-                }, 1)
-            }
-       })
-
-       $('.central-form-pc').submit(ev => {
-            ev.preventDefault()
-            fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/cliques-botao-formulario')
-            if (String($('#email').val()).length == 0) {
-                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/Não informado`)
-                setInterval(() => {
-                    window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
-                    window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
-                    window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
-                    window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
-                }, 1)
-            } else {
-                fetch(`https://escola-node-js.herokuapp.com/api/site/info/contato/${String($('#nomeRes').val())}/${String($('#nomeCri').val())}/${String($('#telefone').val())}/${String($('#email').val())}`)
-                setInterval(() => {
-                    window.document.getElementsByClassName('central-form-envi-pc')[0].style.display = 'block'
-                    window.document.getElementsByClassName('central-form-envi-mobile')[0].style.display = 'block'
-                    window.document.getElementsByClassName('central-form-mobile')[0].style.display = 'none'
-                    window.document.getElementsByClassName('central-form-pc')[0].style.display = 'none'
-                }, 1)
-            }
-       })
+       }
 
        function clicksBtnPrin() {
             const centralFormPc = window.document.getElementsByClassName('central-form-pc')[0]
@@ -352,11 +321,6 @@
             setTimeout(() => {
                 centralFormMobile.style.border = 'none'
             }, 2000)
-            fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/cliques-botao-parte-de-cima')
-       }
-
-       function mapsClique() {
-           fetch('https://escola-node-js.herokuapp.com/api/site/info/eventos/cliques-link-maps')
        }
    </script>
 </body>
