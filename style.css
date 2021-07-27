@@ -1167,7 +1167,7 @@ textarea {
     }
 
     .campo-loca-tel>.loca>.svg-txt {
-        font-weight: 100;
+        margin-left: 1%;
     }
     
     .campo-loca-tel>.loca>.svg-txt>h6 {
