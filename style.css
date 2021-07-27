@@ -1148,3 +1148,17 @@ textarea {
     width: 100%;
     font-weight: 500;
 }
+
+@media screen and (max-width: 626px) {
+    .campo-loca-tel>.tel>.svg-txt {
+        width: 100%;
+        margin-right: 20%;
+        font-weight: 100;
+    }
+
+    .campo-loca-tel>.loca>.svg-txt {
+        width: 100%;
+        margin-left: 20%;
+        font-weight: 100;
+    }
+}
