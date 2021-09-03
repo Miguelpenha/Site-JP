@@ -1,5 +1,3 @@
 sitemap: https://josivalpenha.com/sitemap.xml
 User-agent: *
 Disallow: /404.html
-Disallow: /README.md
-Disallow: /LICENSE

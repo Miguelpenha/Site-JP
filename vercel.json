@@ -11,6 +11,10 @@
         {
             "source": "/.gitattributes",
             "destination": "/404"
+        },
+        {
+            "source": "/.htaccess",
+            "destination": "/404"
         }
     ],
     "rewrites": [
